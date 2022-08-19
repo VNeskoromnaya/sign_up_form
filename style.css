@@ -32,7 +32,6 @@ input[type='tel'],
   gap: 15px;
 }
 
-
 .sex,
 .font-alt {
   color: #808080;
@@ -47,19 +46,39 @@ input[type='tel'],
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.buttons-social {
+  display: flex;
+  gap: 15px;
+  padding-top: 5px;
 }
 
 .btn-round {
-  border-radius: 30px;
+  border-radius: 20px;
   border: none;
 }
 
 .btn-social {
-  width: 40px;
+  width: 42px;
+  height: 40px;
   background-color: #0e6ffd;
 }
 
 .btn-social:hover {
   transform: scale(1.1, 1.1);
   background-color: #3b86f7;
+}
+
+#errorUserName,
+#errorEmail,
+#errorPassword,
+#errorRepeatPassword,
+#errorPhone {
+  margin-top: 7px;
+  color: red;
+  height: auto;
+  font-size: 12px;
+  font-weight: bold;
 }

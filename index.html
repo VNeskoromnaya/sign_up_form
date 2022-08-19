@@ -22,28 +22,28 @@
             <form>
               <div class="mb-3">
                 <div class="userName">
-                  <input type="text" class="form-control" id="exampleInputUserName" aria-describedby="user" placeholder="First Name">
-                  <input type="text" class="form-control" id="exampleInputUserSurname" aria-describedby="user" placeholder="Last name">
+                  <input type="text" class="form-control" id="inputUserName" aria-describedby="user" placeholder="First Name">
+                  <input type="text" class="form-control" id="inputUserSurname" aria-describedby="user" placeholder="Last name">
                 </div>
                 <div id="errorUserName"></div>
               </div>
                 <div class="mb-3">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
                 <div id="errorEmail"></div>
               </div>
               <div class="mb-3">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                 <div id="errorPassword"></div>
               </div>
               <div class="mb-3">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat password">
+                <input type="password" class="form-control" id="inputRepeatPassword" placeholder="Repeat password">
                 <div id="errorRepeatPassword"></div>
               </div>
               <div class="mb-3">
-                <input type="tel" class="form-control" id="exampleInputPhone" placeholder="Mobile number">
+                <input type="tel" class="form-control" id="inputPhone" placeholder="Mobile number">
                 <div id="errorPhone"></div>
               </div>
-              <div class="mb-3 sex">
+              <div class="mb-3 sex id='radioBoxSex">
                 <input type="radio" id="male" name="sex" value="male">
                 <label for="male">Male</label>
                 <input type="radio" id="female" name="sex" value="female">
@@ -51,10 +51,11 @@
                 <div id="errorSex"></div>
               </div>
               <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="inputCheck">
                 <label class="form-check-label agreement" for="exampleCheck1">I agree to the <a href="#">Booo! Term</a> and <a href="#">Privacy</a>.</label>
               </div>
-              <button type="submit" class="btn btn-primary">Create account</button>
+              <!-- поменять позже button на type='submit' -->
+              <button type="button" class="btn btn-primary" id="btnCreateAccount">Create account</button>
             </form>
           </div>
           <div class="modal-footer alternative">
