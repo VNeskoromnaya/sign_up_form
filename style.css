@@ -1,0 +1,65 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(135deg, #759cb8, #759cb8 20%, #e8ddad 70%, #febe40);
+}
+
+.wrapper {}
+
+.modal-wrp {
+  display: block;
+}
+
+.title {
+  font-size: 22px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+.sex {
+  font-size: 14px;
+}
+
+.userName {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+
+.sex,
+.font-alt {
+  color: #808080;
+}
+
+.font-alt,
+.agreement {
+  font-size: 13px;
+}
+
+.alternative {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.btn-round {
+  border-radius: 30px;
+  border: none;
+}
+
+.btn-social {
+  width: 40px;
+  background-color: #0e6ffd;
+}
+
+.btn-social:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #3b86f7;
+}
