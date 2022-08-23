@@ -1,6 +1,6 @@
 const startPage = document.getElementsByClassName("startPage");
 const btnSignIn = document.getElementById("signIn");
-const modalWindow = document.getElementsByClassName("modal-dialog");
+const registrationModal = document.getElementById("registerModal");
 const inputUserName = document.getElementById("inputUserName");
 const inputUserSurname = document.getElementById("inputUserSurname");
 const inputEmail = document.getElementById("inputEmail");
@@ -9,10 +9,11 @@ const inputRepeatPassword = document.getElementById("inputRepeatPassword");
 const inputPhone = document.getElementById("inputPhone");
 const inputCheck = document.getElementById("inputCheck");
 const btnCreateAccount = document.getElementById("btnCreateAccount");
-const welcomeWindow = document.getElementsByClassName("modalWelcome-wrp");
+const welcomeWindow = document.getElementById("welcomeModal");
 
 btnSignIn.addEventListener("click", function openModalWindow() {
   startPage[0].style.display = "none";
+  registrationModal.style.display = "block";
 });
 
 function validForm() {
@@ -88,8 +89,8 @@ function validForm() {
 
 btnCreateAccount.addEventListener("click", function singIn() {
   if (validForm()) {
-    modalWindow[0].style.display = "none";
-    welcomeWindow[0].style.display = "block";
+    registrationModal.style.display = "none";
+    welcomeWindow.style.display = "block";
     document.getElementById(
       "welcome-text"
     ).innerHTML += `Welcome to Booo!, dear&nbsp;<b> ${inputUserName.value}</b>`;
