@@ -44,14 +44,14 @@ function validForm() {
     errorUserName.innerHTML +=
       "You have not filled in the first name and/or surname field <br>";
   } else if (
-    (inputUserName.value.length > 0 && inputUserName.value.length < 2) ||
-    (inputUserSurname.value.length > 0 && inputUserSurname.value.length < 2)
+    inputUserName.value.length < 2 ||
+    inputUserSurname.value.length < 2
   ) {
     isValid = false;
     errorUserName.innerHTML += "Your name and/or surname is too short";
   } else if (
-    !inputUserName.value.match(userNameFormat) ||
-    !inputUserSurname.value.match(userNameFormat)
+    !userNameFormat.test(inputUserName.value) ||
+    !userNameFormat.test(inputUserSurname.value)
   ) {
     isValid = false;
     errorUserName.innerHTML += "You can only use Latin letters <br>";
@@ -64,7 +64,7 @@ function validForm() {
   } else if (!inputEmail.value.match(mailFormat)) {
     isValid = false;
     errorEmail.innerHTML +=
-      "Email may only contain Latin letters and numbers (e.g. example@mail.com)";
+      "Email should be in a correct format (e.g. example@mail.com)";
   }
 
   let passwordFormat =
@@ -73,10 +73,6 @@ function validForm() {
     isValid = false;
     errorPassword.innerHTML +=
       "You need to think of a password using Latin letters, numbers and symbols (!, @, #, $, &). Length of password may be of at least 6 characters";
-  } else if (inputPassword.value.length > 0 && inputPassword.value.length < 6) {
-    isValid = false;
-    errorPassword.innerHTML +=
-      "Your password is too short, a minimum of 6 characters is allowed";
   } else if (!inputPassword.value.match(passwordFormat)) {
     isValid = false;
     errorPassword.innerHTML +=
@@ -95,7 +91,7 @@ function validForm() {
   } else if (!inputPhone.value.match(phoneFormat)) {
     isValid = false;
     errorPhone.innerHTML += "You may use only numbers";
-  } else if (inputPhone.value.length > 0 && inputPhone.value.length < 12) {
+  } else if (inputPhone.value.length < 12) {
     isValid = false;
     errorPhone.innerHTML +=
       "Are you sure you have the right phone number? Perhaps you have missed a few digits.";
